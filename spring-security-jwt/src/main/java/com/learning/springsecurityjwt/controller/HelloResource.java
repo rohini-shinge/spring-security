@@ -28,8 +28,6 @@ public class HelloResource {
 	@Autowired
 	private JWTUtil jwtUtil;
 	
-	
-	
 	@GetMapping(path="/hello")
 	public String hello()
 	{
@@ -51,7 +49,6 @@ public class HelloResource {
 		
 		final UserDetails userDetails=userDetailsService.loadUserByUsername(authenticationRequest.getUsername());
 		final String jwt=jwtUtil.generateToken(userDetails);
-		
 		
 		return ResponseEntity.ok(new AuthenticationResponse(jwt));
 		
