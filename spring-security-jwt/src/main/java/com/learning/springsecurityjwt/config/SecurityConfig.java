@@ -31,8 +31,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
+		
 		http.csrf().disable().authorizeHttpRequests().antMatchers("/authenticate").permitAll().anyRequest().authenticated();
 		http.addFilterBefore(jwtRequestFilter,UsernamePasswordAuthenticationFilter.class);
+		
 	}
 	
 	@Bean
