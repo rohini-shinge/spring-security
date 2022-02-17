@@ -23,3 +23,12 @@ Required Dependencies for LDAP Implementation
 
 ```
 
+Application.properties 
+
+```
+spring.ldap.embedded.base-dn=dc=springframework,dc=org 
+spring.ldap.embedded.ldif=classpath:test-server.ldif 
+spring.ldap.embedded.port=8389 
+spring.ldap.embedded.url=ldap://localhost:8389/
+```
+
