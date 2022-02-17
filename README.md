@@ -32,8 +32,12 @@ spring.ldap.embedded.port=8389
 spring.ldap.embedded.url=ldap://localhost:8389/
 
 ```
-test-server.ldif File taken from 
+test-server.ldif  (Referred from below link)
 ```
 https://spring.io/guides/gs/authenticating-ldap/
 ```
-
+Required Username and Password to run the application
+```
+Username: ben
+Password: benspassword
+```
